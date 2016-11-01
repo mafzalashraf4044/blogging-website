@@ -1,0 +1,244 @@
+/*  SideNav Styling  */
+
+a.brand-logo {
+    font-family: Papyrus, fantasy;
+    font-weight: bold;
+    color: #f16522!important;
+    font-size: 1.5em;
+}
+
+div.logo {
+    font-family: Papyrus, fantasy;
+    font-weight: bold;
+}
+
+div.logo span {
+    font-size: 1.5rem;
+}
+
+
+/* Header & Footer Styling  */
+
+div#footer, div#header {
+    padding: 1rem 0.3rem 1rem 0.3rem;
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+div#header {
+    padding: 1rem 0.3rem 0.5rem 0.3rem;
+}
+
+div#footer .right, div#header .right {
+    text-align: right;
+}
+
+div#footer .left, div#header .left {
+    text-align: left;
+}
+
+div#header img {
+    width: 30px;
+    height: 30px;
+    padding-bottom: 4px;
+    margin-right: 8px;
+    position: relative;
+    left: 8px;
+    top: -4px;
+}
+
+div#header-sm-scr {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+    color: white!important;
+}
+
+div#header-sm-scr a.brand-logo {
+    color: white!important;
+}
+
+div#header-sm-scr i {
+    text-decoration: none;
+    font-size: 2.64rem;
+    line-height: 110%;
+    margin: 0.4rem 0 0.656rem 0;
+    color: white!important;
+}
+
+ul#side-nav i.material-icons {
+    margin: 0px;
+}
+
+div.collapse-overview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul.collapsible.popout {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.side-nav .collapsible {
+    margin: 0px 0px -8px 0px;
+}
+
+body {
+    background-color: #F3F3F3;
+    display: flex;
+    flex-direction: column;
+    padding-left: 300px;
+    min-height: 100vh;
+    justify-content: space-between;
+}
+
+div.panel-body {
+    min-height: 80vh;
+}
+
+h2.panel-heading {
+    /*margin-left: 30px!important;*/
+}
+
+
+/*  Pending.php, approved.php and confirmed.php Styling  */
+
+.adm-panel-card {
+    width: 100%;
+    /*margin: 10px 30px;*/
+}
+
+div.display-flex {
+    display: flex;
+    justify-content: center;
+}
+
+div.display-flex .s12.m4 {
+    flex-basis: 90%;
+}
+
+div.adm-panel-card div.card-action {
+    display: flex;
+    justify-content: flex-end;
+}
+
+div.adm-panel-card form {
+    display: inline-block;
+}
+
+.card .card-content {
+    padding: 0px;
+}
+
+div.panel-body>h2, div.panel-body>h5, .left-margin {
+    margin-left: 24.5px;
+}
+
+div.card-content div.col {
+    overflow-x: auto;
+}
+
+
+/*  Add Category and Items Styling  */
+
+div.form-area {
+    margin: 0px 1rem;
+}
+
+div.button-area {
+    margin: 1rem;
+    text-align: right;
+}
+
+div.form-area input {
+    margin-bottom: 5px;
+}
+
+div.form-area .hidden {
+    visibility: hidden;
+}
+
+div.form-area .error {
+    display: inline-block;
+    color: #9e9e9e;
+    font-size: 0.8em;
+    margin-bottom: 15px;
+    visibility: visible;
+    font-weight: bold;
+}
+
+i.error>span {
+    font-family: "Roboto", sans-serif;
+}
+
+
+/*   Login Page Styling   */
+
+div.login {
+    width: 100%;
+    height: 100vh;
+    background-color: #f3f3f3;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.login-form {
+    width: 50%;
+    padding-bottom: 2em;
+}
+
+div.login-form h3, div.login-form h5 {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+div.login-form span {
+    font-weight: bold;
+    color: #9e9e9e;
+}
+
+
+/*  Buttons Styling  */
+
+i.waves-effect.waves-light.btn.waves-input-wrapper {
+    background-color: #505050;
+}
+
+div.file-field .btn {
+    background-color: #505050;
+}
+
+input.waves-button-input {
+    outline: none;
+}
+
+
+/*  For devices greater than 992px  */
+
+@media only screen and (min-width: 992px), @media only screen and (min-device-width: 992px) {
+    div.collapse-overview {
+        display: block;
+        padding-top: 10em;
+    }
+}
+
+
+/*  For devices less than 992px  */
+
+@media only screen and (max-width: 992px), @media only screen and (max-device-width: 992px) {
+    body {
+        padding-left: 0;
+    }
+    div.login-form {
+        width: 80%!important;
+        padding-bottom: 2em;
+    }
+    h2.panel-heading {
+        font-size: 2em!important;
+    }
+}
