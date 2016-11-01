@@ -1,6 +1,5 @@
 <?php
 include './includes/header.php';
-
 ?>
 
 <div class="col-md-8">
