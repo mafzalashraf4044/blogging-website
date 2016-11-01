@@ -24,7 +24,6 @@
                                 echo "<br><br>";
                                 echo "</div>";
 
-
                       endwhile;
                     } else {
                         echo "0 results";
