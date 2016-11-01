@@ -3,7 +3,6 @@
   //including connection to db from db.php, this file also contains some pre-defined methods for validation etc
   include_once('includes/db.php');
 
-
   if(!isset($_SESSION["user_login"])){
       session_start();
 
