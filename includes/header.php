@@ -18,11 +18,12 @@
     <meta charset="UTF-8">
     <title>Learner's Spot</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- font awesome -->
-    <script src="https://use.fontawesome.com/8a2d7d85ce.js"></script>
 
     <!-- webiste title icon -->
     <link rel="shortcut icon" type="image/x-icon" href="./images/site-icon.png">
+
+    <!-- font awesome -->
+    <script src="https://use.fontawesome.com/8a2d7d85ce.js"></script>
 
     <!-- custom css -->
     <link rel="stylesheet" href="css/style.css">
