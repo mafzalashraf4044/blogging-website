@@ -19,7 +19,6 @@
         $sql = "SELECT booking_id  FROM online_table_booking";
         $result = $conn->query($sql);
       ?>
-
       <div class="collapsible-body"><p><?php echo "$result->num_rows" . " Pending Reservation(s)." ?></p></div>
     </li>
     <li>
@@ -49,13 +48,11 @@
 }
 
 else{
-
     //$url = "http://" . $_SERVER['HTTP_HOST'];
     $url=  $_SERVER['SCRIPT_NAME'];
     $url = substr(rtrim(dirname($_SERVER['PHP_SELF']), '/\\'), 0, 21);
     $url .= "login";
     header('Location: ' . $url, true, 302);
     die();
-
 }
 ?>
