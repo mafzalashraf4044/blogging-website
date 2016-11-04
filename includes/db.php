@@ -4,7 +4,7 @@ $username = "root";
 $password = "";
 $dbname = "learners-spot";
 
-// Create connection
+// Create Connection
 function open_db_conn(){
   global $servername;
   global $username;
@@ -26,13 +26,16 @@ function validate_input($key, $input_value){
       return "$key is Required!";
     }
     return NULL;
+
 }
 
 function sanitize_input($data) {
+
   $data = trim($data);
   $data = stripslashes($data);
   $data = htmlspecialchars($data);
   return $data;
+
 }
 
 ?>
