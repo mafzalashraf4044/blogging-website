@@ -11,7 +11,6 @@
   $conn = open_db_conn();
 ?>
 
-
 <div class="panel-body add-categroy">
   <h2 class="left-margin panel-heading">Add New Category</h2>
 
@@ -35,21 +34,6 @@
 
     ?>
 
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" class="col s12">
-
-      <div class="row form-area">
-        <div class="input-field col s12">
-          <input placeholder="" id="category" name="category" required value="" type="text" class="validate">
-          <label for="category">Categroy Title</label>
-          <i class="hidden fa fa-warning"> <span>Categroy Title is Required!</span></i>
-        </div>
-
-        <div class="col s12 button-area">
-          <input type="submit" class="waves-effect waves-light btn" name="submit" value="Add">
-        </div>
-
-      </div>
-    </form>
 
 
     <h2 class="left-margin panel-heading">Existing Categories</h2>
