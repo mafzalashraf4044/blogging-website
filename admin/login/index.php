@@ -45,7 +45,21 @@
 
         if($result->num_rows > 0){
 
+          while($row = $result->fetch_assoc()){
 
+            if($_POST["username"] == $row["username"] && $_POST["password"] == $row["password"]){
+              $_SESSION["login"] = 1;
+              $_SESSION["username"] = $row["username"];
+              // $url = "http://" . $_SERVER['HTTP_HOST'];
+                 $url=  $_SERVER['SCRIPT_NAME'];
+                 $url = substr(rtrim(dirname($_SERVER['PHP_SELF']), '/\\'), 0, 22);
+                 $url .= "home";
+
+                 header('Location: ' . $url, true, 302);
+                 die();
+            }
+
+          }
 
           if($_SESSION["login"] == 0){
             $show_error = 1;
