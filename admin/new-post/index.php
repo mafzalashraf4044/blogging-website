@@ -46,6 +46,35 @@
 
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" enctype="multipart/form-data" class="col s12">
 
+      <div class="row form-area">
+        <div class="input-field col s6">
+          <input id="title" name="title" required type="text" class="validate">
+          <label for="title">Title</label>
+          <i class="hidden fa fa-warning"> <span>Title is Required!</span></i>
+        </div>
+
+        <div class="input-field col s6">
+          <select name="category">
+            <option value="" disabled selected>Select Categories</option>
+        <?php
+          $conn = open_db_conn();
+
+          $sql = "SELECT category_id, category FROM categories";
+          $result = $conn->query($sql);
+
+          if ($result->num_rows > 0) {
+
+          while($row = $result->fetch_assoc()) {
+            echo "<option value='" .$row['category_id']. "'>" .$row['category']. "</option>";
+
+          }
+
+           }else {
+            echo "<h5>There are no Categories Avaliable</h5>";
+           }
+          $conn->close();
+
+          ?>
           </select>
           <i class="hidden fa fa-warning"> <span>Category is Required!</span></i>
         </div>
