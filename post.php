@@ -39,6 +39,22 @@ include './includes/header.php';
     }
     ?>
 
+    <!-- Show Post By Category -->
+    <?php
+    if(isset($_GET["category"])){
+    $conn = open_db_conn();
+    $category = $_GET['category'];
+    $sql = "SELECT post_id, title, post, likes, comments, date, username FROM blog_post WHERE category=$category ORDER BY post_id DESC";
+
+    display_posts($sql, $conn);
+
+    $conn->close();
+    unset($_GET['category']);
+    }
+    ?>
+
+  </div>
+</div>
 <?php
 include './includes/footer.php';
 ?>
