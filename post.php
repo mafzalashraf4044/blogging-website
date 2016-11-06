@@ -95,6 +95,23 @@ include './includes/header.php';
     }
     ?>
 
+    <!-- Filter by Date/ Blog Archive -->
+    <?php
+    if(isset($_GET["date"])){
+    $conn = open_db_conn();
+    $date = (int)$_GET["date"];
+
+    var_dump($date);
+
+    $sql = "SELECT post_id, title, post, likes, comments, date, username FROM blog_post WHERE date=$date";
+
+
+    display_posts($sql, $conn);
+    $conn->close();
+    unset($_GET['date']);
+    }
+    ?>
+
 
   </div>
 </div>
