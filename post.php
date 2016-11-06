@@ -81,7 +81,21 @@ include './includes/header.php';
     }
     ?>
 
+    <!-- Search Results -->
+    <?php
+    if(isset($_GET["search"])){
+    $conn = open_db_conn();
+    $search = $_GET['search'];
+    $sql = "SELECT post_id, title, post, likes, comments, date, username FROM blog_post WHERE title LIKE '%$search%'";
+
+
+    display_posts($sql, $conn);
+    $conn->close();
+    unset($_GET['search']);
+    }
     ?>
+
+
   </div>
 </div>
 <?php
