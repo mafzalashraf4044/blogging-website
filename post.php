@@ -103,6 +103,7 @@ include './includes/header.php';
 
     var_dump($date);
 
+
     $sql = "SELECT post_id, title, post, likes, comments, date, username FROM blog_post WHERE date=$date";
 
 
@@ -113,6 +114,35 @@ include './includes/header.php';
     ?>
 
 
+    <!-- Display Post Template -->
+    <?php
+      function display_posts($sql, $conn){
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            // output data of each row
+            while($row = $result->fetch_assoc()): ?>
+                <div class='blog-post'>
+                  <a href='#post' class='post-title'><h1><?= $row['title'] ?></h1></a>
+                  <p class='calendar fa fa-calendar'><span> <?= $row['date'] ?></span></p>
+                  <p class='user fa fa-user'><span> <?= $row['username'] ?></span></p>
+                  <br>
+                  <hr>
+                  <p class='post-content post'><?= $row['post'] ?></p>
+                  <a href="post.php?post=<?= $row['post_id'] ?>" class='read-more'>Read More</a>
+
+                </div>
+                <div class='likes-comments'>
+                  <i class='likes fa fa-thumbs-up'> <span> <?= $row['likes'] ?> Likes</span></i>
+                  <i class='comments fa fa-comments'> <span> <?= $row['comments'] ?> Comments</span></i>
+              </div>
+            <?php
+          endwhile;
+        } else {
+            echo "0 results";
+        }
+      }
+    ?>
   </div>
 </div>
 <?php
