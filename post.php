@@ -53,6 +53,22 @@ include './includes/header.php';
     }
     ?>
 
+    <!-- Most Viewed Post -->
+    <?php
+    if(isset($_GET["most-viewed"])){
+    $conn = open_db_conn();
+
+    $sql = "SELECT post_id, title, post, likes, comments, date, username FROM blog_post WHERE likes > 5 ORDER BY likes DESC LIMIT 5";
+
+    display_posts($sql, $conn);
+
+    $conn->close();
+    unset($_GET['most-viewd']);
+    }
+    ?>
+
+
+
   </div>
 </div>
 <?php
