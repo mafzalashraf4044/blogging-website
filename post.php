@@ -68,7 +68,20 @@ include './includes/header.php';
     ?>
 
 
+    <!-- Recent Posts -->
+    <?php
+    if(isset($_GET["recent"])){
+    $conn = open_db_conn();
 
+    $sql = "SELECT post_id, title, post, likes, comments, date, username FROM blog_post ORDER BY post_id DESC LIMIT 5";
+
+    display_posts($sql, $conn);
+    $conn->close();
+    unset($_GET['recent']);
+    }
+    ?>
+
+    ?>
   </div>
 </div>
 <?php
